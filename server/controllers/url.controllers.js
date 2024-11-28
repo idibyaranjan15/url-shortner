@@ -16,7 +16,7 @@ export const handleGenerateNewShortURL = async (req, res) => {
 
   return res.status(200).json({ id: shortId });
 };
-export const hanlderedirectURL = async (req, res) => {
+export const handleRedirectURL = async (req, res) => {
   const { shortId } = req.params;
   const entry = await Url.findOneAndUpdate(
     {
