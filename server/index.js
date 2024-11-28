@@ -1,9 +1,10 @@
 import express from "express";
 import connectDb from "./db/db.js";
+import cors from "cors";
 import path from "path";
 import { PORT } from "./constants/constants.js";
 import mainRouter from "./routes/url.routes.js";
-import cors from "cors";
+
 import staticRouter from "./routes/static.routes.js";
 
 const app = express();

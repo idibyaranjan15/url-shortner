@@ -8,14 +8,14 @@ import Url from "../model/url.model.js";
 
 const router = Router();
 
-router.get("/test", async (req, res) => {
+router.get("/details", async (req, res) => {
   try {
     const allUrls = await Url.find({});
 
-    return res.render("home", {
-      urls: allUrls,
-      host: req.headers.host,
+    return res.json({
+      data: allUrls,
     });
+    console.log(allUrls);
   } catch (error) {
     console.error("Error in /test route:", error);
     return res.status(500).send("Internal Server Error");
