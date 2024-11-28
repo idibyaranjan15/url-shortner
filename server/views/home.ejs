@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url-shortner</title>
+  </head>
+  <body>
+    <h1>Hey from Server</h1>
+    <ul>
+      <% urls.forEach((item) => { %>
+      <li>
+        <strong>Short ID:</strong> <%= item.shortId %><br />
+        <strong>Short URL:</strong> <%= host %>/api/v1/<%= item.shortId %><br />
+        <strong>Redirect URL:</strong> <%= item.redirectURL %>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
